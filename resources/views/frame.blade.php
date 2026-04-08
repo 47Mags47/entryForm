@@ -524,7 +524,7 @@
                         ok = false;
                     }
                     else if (!regex.test(phoneRe)){
-                        $('#phoneError').text('Номер не соответствует формату');
+                        $('#phoneError').text('Номер не соответствует формату +7 (___) ___-__-__');
                         ok = false;
                     } 
                 }
