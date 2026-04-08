@@ -516,10 +516,17 @@
                         $('#firstNameError').text('Введите имя');
                         ok = false;
                     }
+
+                    const regex = /^(\+7|8|7)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/;
+                    const phoneRe = $('#phone').val();
                     if (!$('#phone').val().trim()) {
                         $('#phoneError').text('Введите телефон');
                         ok = false;
                     }
+                    else if (!regex.test(phoneRe)){
+                        $('#phoneError').text('Номер не соответствует формату');
+                        ok = false;
+                    } 
                 }
 
                 if (step === 2 && !$division.val()) {
